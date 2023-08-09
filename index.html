@@ -31,13 +31,6 @@
 				<br>
 <img src="assets/model.png"  width="90%" >
 
-<!-- <h2 id="authors">Authors</h2>
-<ul>
-<li>Meizhen Zheng (Xiamen University) <a href="mailto:midon@stu.xmu.edu.cn">midon@stu.xmu.edu.cn</a></li>
-<li>Xiaodong Shi* (Xiamen University) <a href="mailto:mandel@xmu.edu.cn">mandel@xmu.edu.cn</a></li>
-<li>Peng Bai (Xiamen University) <a href="mailto:baipeng@stu.xmu.edu.cn">baipeng@stu.xmu.edu.cn</a></li>
-</ul>
-<small>*Corresponding author</small> -->
 <h2 id="abstract">Abstract</h2>
 <p>Chinese opera is an important component of traditional Chinese culture and one of the most popular stage arts among the Chinese people. Research for automatic opera voice synthesis(OVS) has high artistic and commercial value. However, compared to sufficient research on the similar singing voice synthesis(SVS) task, there is little research on opera voice synthesis due to high task complexity and lack of relevant datasets. In this situation, we build a precisely labeled audio-text alignment dataset of Gezi opera, one of the Chinese operas, and train an acoustic model for Gezi opera synthesis based on this dataset. We analyze the differences between Chinese opera and popular music for which we formulate specific data annotation strategies and make some adaptions to the acoustic model and the losses. In addition, we find the similarity between Hokkien speech and Gezi opera and propose a speech pretraining strategy to improve our model's performance. The experimental results show that our model outperforms the SOTA models in SVS on the Gezi opera generation task. The extensional experiment further verifies that our model has good performance on generation tasks of other operas such as Peking opera.</p>
 <br>
@@ -48,7 +41,7 @@
 <a href="#audio-quality">1.1 Audio Quality</a><br>
 <b><a href="#extended-studies">Extensional Studies</a></b><br>
 <a href="#Speech-assisted">2.1 Speech pretraining</a><br>
-<a href="#peking-synthesis">2.2 Peking synthesis</a><br>
+<a href="#peking-synthesis">2.2 Peking opera synthesis</a><br>
 <b><a href="#dataset-info">Dataset Info</a></b><br>
 
 <p><span id="audio-samples" name="audio-samples"></span></p>
@@ -154,8 +147,8 @@
 <p><ruby>二次战鼓已催过<rt style="font-size: 15px;">li tshu tsian koo i tshui ke</rt></ruby></p>
 <table><thead>
 <tr>
-<th style="text-align: center">w/ speech-assisted</th>
-<th style="text-align: center">w/o speech-assisted</th>
+<th style="text-align: center">w/ speech pretraining</th>
+<th style="text-align: center">w/o speech pretraining</th>
 </tr></thead><tbody>
 <tr>
 <td style="text-align: center"><audio controls="controls"><source src="audio/hok_pre/[平贵别窑-二次战鼓-薛平贵-武生-二次战鼓已催过-杂碎调01][P]-gezixi_fs2midi_per_fm_adv_m_discs_spk_id_hok_pre.wav" autoplay="">Your browser does not support the audio element.</audio></td>
@@ -166,8 +159,8 @@
 <p><ruby>看来此冤今生难得报<rt style="font-size: 15px;">khuann lai tshu uan kim sing lan tit poo</rt></ruby></p>
 <table><thead>
 <tr>
-<th style="text-align: center">w/ speech-assisted</th>
-<th style="text-align: center">w/o speech-assisted</th>
+<th style="text-align: center">w/ speech pretraining</th>
+<th style="text-align: center">w/o speech pretraining</th>
 </tr></thead><tbody>
 <tr>
 <td style="text-align: center"><audio controls="controls"><source src="audio/hok_pre/[千古长恨-此去云南路千里-赵美玉-闺门旦-看来此冤今生难得报-七字调03][P]-gezixi_fs2midi_per_fm_adv_m_discs_spk_id_hok_pre.wav" autoplay="">Your browser does not support the audio element.</audio></td>
@@ -178,8 +171,8 @@
 <p><ruby>你本是杨家传宗将<rt style="font-size: 15px;">li pun si iunn ka thuan tsong tsiong</rt></ruby></p>
 <table><thead>
 <tr>
-<th style="text-align: center">w/ speech-assisted</th>
-<th style="text-align: center">w/o speech-assisted</th>
+<th style="text-align: center">w/ speech pretraining</th>
+<th style="text-align: center">w/o speech pretraining</th>
 </tr></thead><tbody>
 <tr>
 <td style="text-align: center"><audio controls="controls"><source src="audio/hok_pre/[杨门女将-你本是杨家传宗将-穆桂英-刀马旦-你本是杨家传宗将-小哭01][P]-gezixi_fs2midi_per_fm_adv_m_discs_spk_id_hok_pre.wav" autoplay="">Your browser does not support the audio element.</audio></td>
@@ -187,7 +180,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="peking-synthesis">Peking synthesis</h3>
+<h3 id="peking-synthesis">Peking opera synthesis</h3>
 <p><ruby>我本是一穷儒啊</ruby></p>
 <table><thead>
 <tr>
